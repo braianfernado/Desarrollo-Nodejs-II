@@ -1,0 +1,40 @@
+<% include partials/_header_c %>
+<div class="container">
+
+  <h1>Tus Multas</h1>
+    
+      <table class="table table-bordered table-hover" border="3">
+        <thead>
+          <tr align="center">
+            <td>Nombre</td>
+            <td>Cedula</td>
+            <td>Placa Vehiculo</td>           
+            <td>Modelo</td>
+            <td>Fecha Multa</td>
+            <td>Descripcion</td>
+            <td>Valor Multa</td>
+
+          </tr>
+        </thead>
+        <tbody align="center">
+
+        <% if (data) { %>
+            <% for(var i = 0; i < data.length; i++) { %>
+              <tr>
+                <td><%= data[i].name %></td>
+                <td><%= data[i].id_propietario %></td>
+                <td><%= data[i].id_placa %></td>   
+                <td><%= data[i].modelo %></td>  
+                <td><%= data[i].fecha_multa %></td>  
+                <td><%= data[i].desc_multa %></td>  
+                <td><%= data[i].valor_multa %></td>  
+                
+              </tr>
+            <% } %>
+          <% } %>
+        </tbody>
+      </table>
+    
+        </div>
+
+<% include partials/_footer %>

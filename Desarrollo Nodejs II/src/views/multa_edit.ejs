@@ -1,0 +1,36 @@
+<% include partials/_header_m %>
+
+<div style="margin-left: 502px">
+<div class="container mt-5">
+  <div class="row">
+    <div class="card">
+    
+      <div class="card-body">
+        <div class="card text-center" style="width: 50rem;">
+        <form action="/update_multa/<%= data.id_multa %>" method="POST">
+          <div class="form-group">
+            <input type="text" name="fecha_multa" value="<%= data.fecha_multa%>" placeholder="Fecha Multa" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="desc_multa" value="<%= data.desc_multa%>" placeholder="Descripcion" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="estado_multa" value="<%= data.estado_multa%>" placeholder="Estado Multa" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="valor_multa" value="<%= data.valor_multa%>" placeholder="Valor Multa" class="form-control">
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+                Guardar Multa
+          </button>
+        </form>
+       
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+
+<% include partials/_footer %>

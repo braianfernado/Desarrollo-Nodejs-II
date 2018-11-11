@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Node Mysql</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	</head>
+  <style type="text/css">
+    .navbar {
+    background-color: #234E44;
+    }
+    body {
+    background-color: #DDD7D7;
+    }
+    table{
+      background-color: #8ED482; 
+    }
+    hr, .hrcolor {
+     height: 1px;
+     border: 0;
+     color: #666;
+     background-color: #234E44;
+    }
+     h4 {
+      -webkit-animation: bounce .4s ease infinite alternate;
+      font-family:'verdana', cursive;
+      font-size: 40px;
+      color: #234E44;
+      text-align: center;
+      line-height: 40px;
+      text-shadow: 0 1px 0 #027D76, 0 2px 0 #CCC, 0 3px 0 #CCC, 0 4px 0 #01BF90, 0 5px 0 #CCC, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent, 0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.6);
+  }
+  @-webkit-keyframes bounce { 
+    100% {
+    top: -5px;
+    text-shadow: 0 1px 0 #CCC, 0 2px 0 #CCC, 0 3px 0 #CCC, 0 4px 0 #CCC, 0 5px 0 #CCC, 0 6px 0 #CCC, 0 7px 0 #CCC, 0 8px 0 #CCC, 0 9px 0 #CCC, 0 30px 30px rgba(0, 0, 0, 0.3);
+  }
+  </style>
+<body>
+<br>
+  <div class="container">
+<h4  align="center">Bienvenido</h4>
+<hr>
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">Node MySql</a>
+
+        <div class="container">
+          <ul class="nav navbar-nav">  
+              <li><a href="/nuevo"><button class="btn btn-success">Nuevo Propietario</button></a></li>
+              <li><a href="/vehiculo"><button class="btn btn-warning">Agregar Vehiculo</button></a></li>
+              <li><a href="/multa"><button class="btn btn-primary">Asignar Multas</button></a></li>
+              
+              <li>
+                <a>
+                  <form action="/prueba" method="POST" style="width: 22rem;">
+                      <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Cedula" name="id" required>
+                      <div class="input-group-btn">                          
+                      <button type="submit" class="btn btn-default">Buscar</button></div>
+                    </div>
+                  </form>
+                </a>
+              </li>
+       
+            </ul>         
+             
+
+<br>
+
+              </div>
+            </div>  
+          </div>
+
+    </nav>
+</div>

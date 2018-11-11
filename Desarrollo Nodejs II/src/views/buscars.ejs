@@ -1,0 +1,78 @@
+<% include partials/_header %>
+
+
+<!--
+<script language="javascript">     
+    function recibir()
+    {
+        var valor = document.getElementById("texto").value;
+          
+    }
+
+
+
+</script> 
+<div class="container">
+
+
+<input type="text" id="texto"/>
+<input type="button" class="btn btn-success" name="enviar" value="Enviar" onclick="recibir();"/><br>
+<div id="txt"></div>
+</div>
+
+-->
+<!--
+ <input type="text" name="id_propietario" id="variable" placeholder="Cedula" class="form-control" required>
+     <a href="/prueba" class="btn btn-info">Editar</a>
+
+<script type="text/javascript">
+  var valor = document.getElementById("variable");
+
+</script>
+
+-->
+
+
+
+
+
+         
+       
+        <form action="/prueba" method="POST">
+
+
+<div class="form-group"">
+  <input type="text" name="id">
+</div>
+          
+          <div align="center">
+              <button type="submit" class="btn btn-success">
+               Buscar
+              </button>
+          </div>
+        </form>
+<!--
+<div class="container">
+
+    <table class="table table-bordered table-hover" border="4">
+        <thead align="center">
+          <tr >
+          	<td>Propietario</td>
+          	<td>Cedula</td>
+          	<td>Placa del vehiculo</td>
+            <td>Modelo</td>
+            <td>Fecha</td>
+            <td>Descripcion </td>         
+            <td>Valor </td>
+            
+          </tr>
+        </thead>
+        <tbody align="center">
+			
+        </tbody>
+     </table>
+</div>
+-->
+  		
+     
+<% include partials/_footer %>

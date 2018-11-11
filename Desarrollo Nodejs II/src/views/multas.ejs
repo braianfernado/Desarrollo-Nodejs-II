@@ -1,0 +1,83 @@
+<% include partials/_header_m %>
+
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-7">
+      <table class="table table-bordered table-hover" border="3">
+        <thead>
+          <tr align="center">
+            <td>Codigo Multa</td>
+            <td>Fecha</td>
+            <td>Descripcion </td>         
+            <td>Estado </td>
+             <td>Valor </td>
+              <td>Placa del vehiculo</td>
+              <td>Acciones</td>
+          </tr>
+        </thead>
+        <tbody align="center">
+        	<% if (data) { %>
+          
+            <% for(var i = 0; i < data.length; i++) { %>
+              <tr>
+                <td><%= data[i].id_multa%></td>
+                <td><%= data[i].fecha_multa %></td>
+                <td><%= data[i].desc_multa %></td>
+                <td><%= data[i].estado_multa %></td>
+                <td><%= data[i].valor_multa %></td>
+                <td><%= data[i].id_placa_m %></td>
+                 
+                <td>
+                  <a href="/update_multa/<%= data[i].id_multa %>" class="btn btn-info">Editar</a>
+                  <a href="/delete_multa/<%= data[i].id_multa %>" class="btn btn-danger">Eliminar</a>
+                </td>
+              </tr>
+            <% } %>
+          <% } %>
+       
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-5">
+      <div class="card-body">
+
+        <form action="/guardar_multa" method="POST">
+
+          <div class="form-group" >
+            <input type="text" name="id_multa" placeholder="Multa" class="form-control" autofocus>
+          </div>
+          <div class="form-group">
+            <input type="text" name="fecha_multa" placeholder="Fecha de la Multa" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="desc_multa" placeholder="Descripcion" class="form-control">
+          </div>
+          
+          <div class="form-group">
+            <input type="text" name="estado_multa" placeholder="Estado Multa" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <input type="text" name="valor_multa" placeholder="Valor Multa" class="form-control">
+          </div>
+          
+          <div class="form-group">
+            <input type="text" name="id_placa_m" placeholder="Placa Vehiculo" class="form-control">
+          </div>
+          
+          
+          <div align="center">
+              <button type="submit" class="btn btn-primary">
+              Registrar Multa
+              </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<% include partials/_footer %>

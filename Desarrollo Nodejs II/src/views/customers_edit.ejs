@@ -1,0 +1,26 @@
+<% include partials/_header_p %>
+
+<div style="margin-left: 630px">
+<div class="container mt-5">
+  <div class="row">
+    <div class="card text-center" style="width: 18rem;">
+      <div class="card-body">
+        <form action="/update/<%= data.id_propietario %>" method="POST" style="width: 20rem;">
+          <div class="form-group">
+            <input type="text" name="name" value="<%= data.name%>" placeholder="Nombre" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="lastname" value="<%= data.lastname%>" placeholder="Apellido" class="form-control">
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+                Guardar Propietario
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<% include partials/_footer %>

@@ -1,0 +1,15 @@
+ 
+
+	<?php $mysqli = new mysqli('localhost', 'root', '', 'crudnodejsmysql'); ?>
+
+ <?php
+                $query = $mysqli -> query ("SELECT id_propietario from propietario");
+                while ($valores = mysqli_fetch_array($query)) {
+                  echo '<option value="'.$valores[id].'">'.$valores[id_propietario].'</option>';
+              }
+            ?>
+
+
+
+
+    
